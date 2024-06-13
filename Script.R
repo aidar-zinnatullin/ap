@@ -16,7 +16,8 @@ italian_wiki <-jsonlite::fromJSON(txt = json_result, flatten = TRUE)
 str(italian_wiki$items)
 italian_wiki <- as.data.frame(italian_wiki$items)
 
-# something
+# something 
+# dvbbr
 
 class(italian_wiki$views)
 class(italian_wiki$timestamp)
