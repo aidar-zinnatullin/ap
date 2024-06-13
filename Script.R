@@ -16,8 +16,6 @@ italian_wiki <-jsonlite::fromJSON(txt = json_result, flatten = TRUE)
 str(italian_wiki$items)
 italian_wiki <- as.data.frame(italian_wiki$items)
 
-# something 
-# dvbbr
 
 class(italian_wiki$views)
 class(italian_wiki$timestamp)
@@ -37,3 +35,6 @@ ggplot(italian_wiki, aes(x = testing, y = views)) +
   xlab("Year-Month")+
   ylab("Views")+
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+
+ggsave(here("Figure Month.jpeg"), width = 14, height = 10, dpi = 300)
+
